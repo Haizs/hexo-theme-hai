@@ -1,0 +1,53 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <%
+    var title = page.title;
+    if (is_archive()) {
+        title = __('title.archive');
+        if (is_month()) {
+            title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()) {
+            title += ': ' + page.year;
+        }
+    } else if (is_category()) {
+        title = __('title.category') + ': ' + page.category;
+    } else if (is_tag()) {
+        title = __('title.tag') + ': ' + page.tag;
+    }
+    %>
+    <title><%= ((title) ? title + ' | ' : '') + config.title %></title>
+
+    <% if (page.author || config.author) { %>
+    <meta name="author" content="<%= (page.author) ? page.author : config.author %>">
+    <% } %>
+    <% if (is_post() || is_page()){ %>
+    <% if (page.description) { %>
+    <meta name="description" content="<%= page.description %>">
+    <% } %>
+    <% if (page.keywords){ %>
+    <meta name="keywords" content="<%= page.keywords %>">
+    <% } %>
+    <link rel="canonical" href="<%- url_for(page.permalink) %>">
+    <% } else if (is_home() && page.current == 1) { %>
+    <% if (config.description) { %>
+    <meta name="description" content="<%= config.description %>">
+    <% } %>
+    <% if (config.keywords){ %>
+    <meta name="keywords" content="<%= config.keywords %>">
+    <% }%>
+    <link rel="canonical" href="<%- url_for(config.url) %>">
+    <%} else { %>
+    <meta name="robots" content="noindex">
+    <% } %>
+
+    <% if (theme.favicon){ %>
+    <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>">
+    <% } %>
+    <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+    <% } %>
+
+    <%- css('css/style') %>
+</head>

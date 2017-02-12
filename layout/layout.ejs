@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html<%= (config.language) ? ' lang=' + config.language.substring(0, 2) : "" %>>
+<%- partial('_partial/head') %>
+<body>
+<%- partial('_partial/header') %>
+<div id="container">
+    <div class="wrap">
+        <%- body %>
+    </div>
+    <%- partial('_partial/sidebar') %>
+</div>
+<%- partial('_partial/footer') %>
+<%- partial('_partial/after-footer') %>
+</body>
+</html>
