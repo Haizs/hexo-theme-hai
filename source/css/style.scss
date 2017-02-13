@@ -1,5 +1,11 @@
-body {
-  background-image: url("../img/leaf.png");
-  background-size: 294px 235px;
-  background-attachment: fixed;
-}
+/*!
+ * Hexo Theme Hai
+ * Author: Haizs
+ * Author URI: https://haizs.com
+ */
+@import "partials/base";
+@import "partials/main";
+@import "partials/header";
+@import "partials/content";
+@import "partials/sidebar";
+@import "partials/footer";

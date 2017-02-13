@@ -1,0 +1,102 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  background: {
+    attachment: fixed;
+    image: url("images/leaf.png");
+    size: 294px 235px;
+  }
+  font: {
+    family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    size: 16px;
+  }
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  &:visited {
+    color: black;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
+  &:hover {
+    color: $theme-color;
+  }
+}
+
+.wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

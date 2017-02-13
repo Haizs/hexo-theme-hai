@@ -17,7 +17,7 @@
         title = __('title.tag') + ': ' + page.tag;
     }
     %>
-    <title><%= ((title) ? title + ' | ' : '') + config.title %></title>
+    <title><%= (is_home()) ? (config.title + ' | ' + config.subtitle) : (((title) ? title + ' | ' : '') + config.title) %></title>
 
     <% if (page.author || config.author) { %>
     <meta name="author" content="<%= (page.author) ? page.author : config.author %>">
@@ -36,9 +36,9 @@
     <% } %>
     <% if (config.keywords){ %>
     <meta name="keywords" content="<%= config.keywords %>">
-    <% }%>
+    <% } %>
     <link rel="canonical" href="<%- url_for(config.url) %>">
-    <%} else { %>
+    <% } else { %>
     <meta name="robots" content="noindex">
     <% } %>
 
@@ -50,4 +50,5 @@
     <% } %>
 
     <%- css('css/style') %>
+    <%- css('css/font-awesome.min') %>
 </head>

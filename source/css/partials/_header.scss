@@ -1,0 +1,53 @@
+header {
+  @include bg-white();
+  position: fixed;
+  width: 100%;
+  a {
+    transition: 0.2s ease;
+    color: #565a5f;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+    padding: 5px 20px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font: {
+      weight: 300;
+    }
+  }
+}
+
+#logo {
+  float: left;
+}
+
+#site-title {
+  border-right: 1px dashed #DCDCDC;
+  color: $theme-color;
+  float: left;
+  font: {
+    size: 20px;
+    weight: 500;
+  }
+}
+
+#nav-header {
+  float: left;
+}
+
+#nav-search {
+  float: right;
+}
+
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+.headroom--bottom,
+.headroom--pinned {
+  transform: translateY(0%);
+}

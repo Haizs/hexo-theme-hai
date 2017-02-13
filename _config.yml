@@ -1,5 +1,10 @@
 # Header
 menu:
+  首页: /
+  存档: /archives
+  分类: /categories
+  留言: /guestbook
+  关于: /about
 
 # Miscellaneous
-favicon: /img/favicon.ico
+favicon: /images/favicon.ico
