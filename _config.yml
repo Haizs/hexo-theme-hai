@@ -6,5 +6,11 @@ menu:
   留言: /guestbook
   关于: /about
 
+# Footer
+nav:
+  站点地图: /sitemap.xml
+  主题源码: https://Github.com/Haizs/hexo-theme-hai
+  海之工作室: https://haizs.net
+
 # Miscellaneous
 favicon: /images/favicon.ico

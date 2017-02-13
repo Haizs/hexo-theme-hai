@@ -1,12 +1,23 @@
 <footer>
     <div class="wrap">
-        <div class="cc">
+        <div id="cc">
             本站采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
                 <i class="fa fa-creative-commons"></i> 知识共享署名-非商业性使用 4.0 国际许可协议
             </a>进行许可<br/>转载请保留原文链接及作者
         </div>
-        <div class="copyright">
-
+        <div id="cc-mobile">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+                <i class="fa fa-creative-commons"></i> 知识共享署名-非商业性使用 4.0 国际许可协议
+            </a><br/>转载请保留原文链接及作者
         </div>
+        <nav id="nav-footer">
+            <% for (var i in theme.nav) { %>
+            <a class="nav-item" href="<%- url_for(theme.nav[i]) %>"><%- i %></a>
+            <% } %>
+        </nav>
+        <div id="copyright">
+            <i class="fa fa-copyright"></i> 2007-2017 Haizs Studio. All rights reserved.<br> Powered by Hexo with theme Hai.
+        </div>
+        <div class="clear"></div>
     </div>
 </footer>
