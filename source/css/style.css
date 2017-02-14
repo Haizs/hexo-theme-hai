@@ -9,10 +9,10 @@ header {
   position: fixed;
   width: 100%; }
   header a {
-    height: 32px;
-    line-height: 32px;
+    height: 42px;
+    line-height: 42px;
     float: left;
-    padding: 5px 20px; }
+    padding: 0 27px; }
 
 #logo {
   float: left; }
@@ -46,40 +46,47 @@ footer {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   width: 100%;
   margin: 20px 0 0 0;
+  padding: 15px 0; }
+
+#cc,
+#cc-mobile {
+  color: #636363;
+  border-bottom: 1px dashed #DCDCDC;
+  display: block;
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align: center; }
+
+#nav-footer {
   padding: 10px 0; }
+  #nav-footer a {
+    font-size: 11px;
+    color: #828282; }
 
-@media all and (min-width: 768px) {
-  #cc {
-    color: #636363;
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 13px;
-    border-bottom: 1px dashed #DCDCDC; }
+#copyright {
+  color: #828282;
+  float: left;
+  line-height: 20px;
+  padding: 10px 0;
+  font-size: 12px;
+  text-align: center; }
 
+@media all and (min-width: 769px) {
   #cc-mobile {
     display: none; }
 
   #nav-footer {
     float: right;
-    padding: 10px 0;
-    line-height: 27px; }
+    line-height: 39px; }
     #nav-footer a {
       margin-left: 42px; } }
 @media all and (max-width: 768px) {
   #cc {
     display: none; }
 
-  #cc-mobile {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
-    border-bottom: 1px dashed #DCDCDC; }
-
   #nav-footer {
-    float: none;
-    padding: 5px 0; }
+    float: none; }
     #nav-footer a {
       display: block;
       padding: 5px 0;
@@ -88,17 +95,6 @@ footer {
 
   #copyright {
     width: 100%; } }
-#nav-footer a {
-  font-size: 11px;
-  color: #828282; }
-
-#copyright {
-  float: left;
-  padding: 10px 0;
-  color: #828282;
-  font-size: 12px;
-  text-align: center; }
-
 html,
 body,
 div,
