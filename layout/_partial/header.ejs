@@ -5,11 +5,11 @@
         </div>
         <nav id="nav-header">
             <% for (var i in theme.menu) { %>
-            <a class="nav-item" href="<%- url_for(theme.menu[i]) %>"><%- i %></a>
+            <div class="nav-item"><a href="<%- url_for(theme.menu[i]) %>"><%- i %></a></div>
             <% } %>
         </nav>
         <div id="nav-search">
-            <a class="nav-item" href="#"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a>
+            <div class="nav-item"><a href="#"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
         </div>
     </div>
 </header>

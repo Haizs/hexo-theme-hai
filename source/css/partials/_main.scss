@@ -67,17 +67,28 @@ td {
   background: transparent;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background: {
     attachment: fixed;
     image: url("images/leaf.png");
     size: 294px 235px;
   }
+  display: flex;
+  display: -webkit-flex;
+  min-height: 100%;
+  flex-direction: column;
+  -webkit-flex-direction: column;
   font: {
     family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     size: 16px;
   }
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-stroke: 1px transparent;
 }
 
 a {
@@ -95,6 +106,10 @@ a {
   }
 }
 
+div {
+  display: block;
+}
+
 .wrap {
   max-width: 1320px;
   margin: 0 auto;
@@ -107,20 +122,27 @@ a {
 
 .nav-item {
   color: black;
+  display: inline-block;
   transition: 0.2s ease;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  float: left;
   font: {
     weight: 300;
   }
-
-  &:visited {
+  a {
     color: black;
   }
-  &:hover {
+  a:visited {
+    color: black;
+  }
+  a:hover {
     color: $theme-color !important;
   }
 }
 
-#container{
+#container {
+  flex: 1;
+  -webkit-flex: 1;
   padding-top: 62px;
+  padding-bottom: 20px;
 }

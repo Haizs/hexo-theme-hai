@@ -1,7 +1,6 @@
 footer {
   @include bg-white();
   width: 100%;
-  margin: 20px 0 0 0;
   padding: 15px 0;
 }
 
@@ -58,11 +57,10 @@ footer {
   }
   #nav-footer {
     float: none;
-    a {
-      display: block;
-      padding: 5px 0;
+    .nav-item{
+      width:100%;
       text-align: center;
-      width: 100%;
+      padding:5px 0;
     }
   }
   #copyright {

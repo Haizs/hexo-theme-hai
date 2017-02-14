@@ -9,10 +9,12 @@ header {
   position: fixed;
   width: 100%; }
   header a {
+    display: block;
     height: 42px;
     line-height: 42px;
-    float: left;
     padding: 0 27px; }
+  header .nav-item a:hover {
+    background-color: #f7f7f7; }
 
 #logo {
   float: left; }
@@ -22,7 +24,7 @@ header {
   color: #38b7ea;
   float: left;
   font-size: 20px;
-  font-weight: 500; }
+  font-weight: bold; }
 
 #nav-header {
   float: left; }
@@ -45,7 +47,6 @@ footer {
   background-color: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   width: 100%;
-  margin: 20px 0 0 0;
   padding: 15px 0; }
 
 #cc,
@@ -87,11 +88,10 @@ footer {
 
   #nav-footer {
     float: none; }
-    #nav-footer a {
-      display: block;
-      padding: 5px 0;
+    #nav-footer .nav-item {
+      width: 100%;
       text-align: center;
-      width: 100%; }
+      padding: 5px 0; }
 
   #copyright {
     width: 100%; } }
@@ -163,13 +163,23 @@ td {
   vertical-align: baseline;
   background: transparent; }
 
+html {
+  height: 100%; }
+
 body {
   background-attachment: fixed;
   background-image: url("images/leaf.png");
   background-size: 294px 235px;
+  display: flex;
+  display: -webkit-flex;
+  min-height: 100%;
+  flex-direction: column;
+  -webkit-flex-direction: column;
   font-family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 16px;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-stroke: 1px transparent; }
 
 a {
   color: #38b7ea;
@@ -183,6 +193,9 @@ a {
   a:hover {
     color: #6ac2c0; }
 
+div {
+  display: block; }
+
 .wrap {
   max-width: 1320px;
   margin: 0 auto;
@@ -193,15 +206,22 @@ a {
 
 .nav-item {
   color: black;
+  display: inline-block;
   transition: 0.2s ease;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  float: left;
   font-weight: 300; }
-  .nav-item:visited {
+  .nav-item a {
     color: black; }
-  .nav-item:hover {
+  .nav-item a:visited {
+    color: black; }
+  .nav-item a:hover {
     color: #38b7ea !important; }
 
 #container {
-  padding-top: 62px; }
+  flex: 1;
+  -webkit-flex: 1;
+  padding-top: 62px;
+  padding-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */
