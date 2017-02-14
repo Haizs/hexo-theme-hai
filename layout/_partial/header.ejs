@@ -5,11 +5,24 @@
         </div>
         <nav id="nav-header">
             <% for (var i in theme.menu) { %>
-            <div class="nav-item"><a href="<%- url_for(theme.menu[i]) %>"><%- i %></a></div>
+            <div class="nav-item">
+                <a href="<%- url_for(theme.menu[i]) %>"><%- i %></a>
+            </div>
             <% } %>
         </nav>
+        <nav id="nav-header-mobile">
+            <div class="nav-item">
+                <a href="" id="nav-switch" class="header-switch">
+                    <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                </a>
+            </div>
+        </nav>
         <div id="nav-search">
-            <div class="nav-item"><a href="#"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a></div>
+            <div class="nav-item">
+                <a href="" id="search-switch" class="header-switch">
+                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </div>
 </header>

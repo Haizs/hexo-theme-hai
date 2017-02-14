@@ -8,8 +8,8 @@ header {
     line-height: 42px;
     padding: 0 27px;
   }
-  .nav-item a:hover{
-    background-color: darken(white,3%);
+  .nav-item a:hover {
+    background-color: $nav-color;
   }
 }
 
@@ -29,10 +29,38 @@ header {
 
 #nav-header {
   float: left;
+  @media all and (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+#nav-header-mobile {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  @media all and (min-width: $mobile-width+1px) {
+    display: none;
+  }
 }
 
 #nav-search {
   float: right;
+  text-align: center;
+}
+
+.header-switch {
+  width: 42px;
+  padding: 0;
+}
+
+.header-switch-rotate {
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -moz-transform: rotate(90deg); /* Firefox */
+  -webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+  -o-transform: rotate(90deg); /* Opera */
+  background-color: $nav-color;
 }
 
 .headroom {

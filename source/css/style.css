@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Hexo Theme Hai
  * Author: Haizs
@@ -28,9 +29,38 @@ header {
 
 #nav-header {
   float: left; }
+  @media all and (max-width: 768px) {
+    #nav-header {
+      display: none; } }
+
+#nav-header-mobile {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: -1; }
+  @media all and (min-width: 769px) {
+    #nav-header-mobile {
+      display: none; } }
 
 #nav-search {
-  float: right; }
+  float: right;
+  text-align: center; }
+
+.header-switch {
+  width: 42px;
+  padding: 0; }
+
+.header-switch-rotate {
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -moz-transform: rotate(90deg);
+  /* Firefox */
+  -webkit-transform: rotate(90deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(90deg);
+  /* Opera */
+  background-color: #f7f7f7; }
 
 .headroom {
   will-change: transform;
@@ -54,7 +84,7 @@ footer {
   color: #636363;
   border-bottom: 1px dashed #DCDCDC;
   display: block;
-  font-size: 13px;
+  font-size: 12px;
   padding-top: 10px;
   padding-bottom: 20px;
   text-align: center; }
@@ -209,8 +239,10 @@ div {
   display: inline-block;
   transition: 0.2s ease;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  float: left;
   font-weight: 300; }
+  @media all and (min-width: 769px) {
+    .nav-item {
+      float: left; } }
   .nav-item a {
     color: black; }
   .nav-item a:visited {
