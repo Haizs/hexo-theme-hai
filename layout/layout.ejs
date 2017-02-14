@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html<%= (config.language) ? ' lang=' + config.language.substring(0, 2) : "" %>>
 <%- partial('_partial/head') %>
-<body>
+<body class="no-touch" ontouchstart="removeHoverState()">
 <%- partial('_partial/header') %>
 <div id="container" class="wrap">
     <div class="content">

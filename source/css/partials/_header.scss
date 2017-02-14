@@ -8,8 +8,12 @@ header {
     line-height: 42px;
     padding: 0 27px;
   }
-  .nav-item a:hover {
+  .no-touch .nav-item a:hover {
     background-color: $nav-color;
+  }
+  .fa-lg {
+    vertical-align: baseline;
+    line-height: 42px;
   }
 }
 

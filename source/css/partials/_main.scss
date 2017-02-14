@@ -98,10 +98,9 @@ a {
     color: $theme-color;
     -webkit-transition: 0.2s ease;
     -moz-transition: 0.2s ease;
-    -ms-transition: 0.2s ease;
     transition: 0.2s ease;
   }
-  &:hover {
+  .no-touch &:hover {
     color: $hover-color;
   }
 }
@@ -133,13 +132,14 @@ div {
   }
   a {
     color: black;
+    &:visited{
+      color: black;
+    }
   }
-  a:visited {
-    color: black;
-  }
-  a:hover {
-    color: $theme-color !important;
-  }
+}
+
+.no-touch .nav-item a:hover{
+  color: $theme-color !important;
 }
 
 #container {

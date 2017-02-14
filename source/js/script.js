@@ -1,6 +1,6 @@
-$(function () {
-    $("header").headroom();
-});
+function removeHoverState() {
+    $("body").removeClass("no-touch");
+}
 
 $("#nav-switch").on('click', function () {
     $(this).toggleClass('header-switch-rotate');
@@ -10,4 +10,8 @@ $("#nav-switch").on('click', function () {
 $("#search-switch").on('click', function () {
     $(this).toggleClass('header-switch-rotate');
     return false;
+});
+
+$(function () {
+    $("header").headroom();
 });

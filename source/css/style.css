@@ -14,8 +14,11 @@ header {
     height: 42px;
     line-height: 42px;
     padding: 0 27px; }
-  header .nav-item a:hover {
+  header .no-touch .nav-item a:hover {
     background-color: #f7f7f7; }
+  header .fa-lg {
+    vertical-align: baseline;
+    line-height: 42px; }
 
 #logo {
   float: left; }
@@ -218,9 +221,8 @@ a {
     color: #38b7ea;
     -webkit-transition: 0.2s ease;
     -moz-transition: 0.2s ease;
-    -ms-transition: 0.2s ease;
     transition: 0.2s ease; }
-  a:hover {
+  .no-touch a:hover {
     color: #6ac2c0; }
 
 div {
@@ -245,10 +247,11 @@ div {
       float: left; } }
   .nav-item a {
     color: black; }
-  .nav-item a:visited {
-    color: black; }
-  .nav-item a:hover {
-    color: #38b7ea !important; }
+    .nav-item a:visited {
+      color: black; }
+
+.no-touch .nav-item a:hover {
+  color: #38b7ea !important; }
 
 #container {
   flex: 1;
