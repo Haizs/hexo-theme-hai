@@ -17,9 +17,9 @@ header {
     line-height: 42px;
     padding: 0 27px; }
   header i {
-    transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    -webkit-transition: 0.2s ease; }
+    transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -webkit-transition: transform 0.2s ease; }
   .no-touch header .nav-item a:hover {
     background-color: #f7f7f7; }
   header .fa-lg {

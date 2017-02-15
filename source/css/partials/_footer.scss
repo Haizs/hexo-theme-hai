@@ -9,7 +9,7 @@ footer {
   color: #636363;
   border-bottom: 1px dashed #DCDCDC;
   display: block;
-  font:{
+  font: {
     size: 12px;
   }
   padding: {
@@ -30,7 +30,7 @@ footer {
 #copyright {
   color: #828282;
   float: left;
-  line-height:20px;
+  line-height: 20px;
   padding: 10px 0;
   font: {
     size: 12px;
@@ -57,10 +57,10 @@ footer {
   }
   #nav-footer {
     float: none;
-    .nav-item{
-      width:100%;
+    .nav-item {
+      width: 100%;
       text-align: center;
-      padding:5px 0;
+      padding: 5px 0;
     }
   }
   #copyright {

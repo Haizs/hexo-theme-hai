@@ -9,9 +9,9 @@ header {
     padding: 0 27px;
   }
   i {
-    transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    -webkit-transition: 0.2s ease;
+    transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -webkit-transition: transform 0.2s ease;
   }
   .no-touch & .nav-item a:hover {
     background-color: $nav-color;
