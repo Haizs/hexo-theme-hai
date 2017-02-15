@@ -38,7 +38,7 @@ footer {
   text-align: center;
 }
 
-@media all and (min-width: $mobile-width+1px) {
+@media all and (min-width: $tablet-width+1px) {
   #cc-mobile {
     display: none;
   }
@@ -51,7 +51,7 @@ footer {
   }
 }
 
-@media all and (max-width: $mobile-width) {
+@media all and (max-width: $tablet-width) {
   #cc {
     display: none;
   }

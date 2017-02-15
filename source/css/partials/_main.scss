@@ -124,7 +124,7 @@ div {
   display: inline-block;
   transition: 0.2s ease;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  @media all and (min-width: $mobile-width+1px) {
+  @media all and (min-width: $tablet-width+1px) {
     float: left;
   }
   font: {
@@ -160,7 +160,7 @@ div {
 .content {
   float: left;
   width: 100%;
-  @media all and (min-width: $mobile-width+1px) {
+  @media all and (min-width: $tablet-width+1px) {
     margin-right: -327px;
     & > div {
       margin-right: 327px;

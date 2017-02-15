@@ -25,7 +25,7 @@ header {
 }
 
 .header-wrap {
-  @media all and (max-width: $mobile-width) {
+  @media all and (max-width: $tablet-width) {
     padding: 0 !important;
   }
 }
@@ -50,7 +50,7 @@ header {
 
 #nav-header {
   float: left;
-  @media all and (max-width: $mobile-width) {
+  @media all and (max-width: $tablet-width) {
     display: none;
   }
 }
@@ -61,7 +61,7 @@ header {
   text-align: center;
   width: 100%;
   z-index: -1;
-  @media all and (min-width: $mobile-width+1px) {
+  @media all and (min-width: $tablet-width+1px) {
     display: none;
   }
 }

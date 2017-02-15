@@ -3,7 +3,7 @@ aside {
   display: block;
   float: right;
   width: 300px;
-  @media all and (max-width: $mobile-width) {
+  @media all and (max-width: $tablet-width) {
     display: none;
   }
 }

@@ -1,7 +1,8 @@
 $theme-color: #38b7ea;
 $hover-color: #6ac2c0;
 $nav-color: #f7f7f7;
-$mobile-width: 768px;
+$tablet-width: 768px;
+$mobile-width: 640px;
 
 @mixin bg-white($alpha: 1) {
   background: {
