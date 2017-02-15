@@ -112,10 +112,7 @@ div {
 
 .wrap {
   max-width: 1320px;
-  @media all and (min-width: $mobile-width+1px) {
-    margin: 0 auto;
-  }
-  padding: 0 20px;
+  padding: 0 27px;
 }
 
 .clear {
@@ -147,6 +144,26 @@ div {
 #container {
   flex: 1;
   -webkit-flex: 1;
-  padding-top: 62px;
-  padding-bottom: 20px;
+  margin: {
+    top: 42px+27px;
+    bottom: 27px;
+    left: auto;
+    right: auto;
+  }
+  article,
+  div,
+  img {
+    border-radius: 3px;
+  }
+}
+
+.content {
+  float: left;
+  width: 100%;
+  @media all and (min-width: $mobile-width+1px) {
+    margin-right: -327px;
+    & > div {
+      margin-right: 327px;
+    }
+  }
 }

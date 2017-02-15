@@ -4,8 +4,6 @@ function isClickArea(target, area) {
 
 $(function () {
     $('html').on('click touchstart', function (e) {
-        // switchOff(e.target, $('.nav-switch-on'));
-        // switchOff(e.target, $('.search-switch-on'));
         if (!isClickArea(e.target, $('.nav-switch-on').parent()) && !isClickArea(e.target, $('.nav-popup-show'))) $('.nav-switch-on').trigger('click');
         if (!isClickArea(e.target, $('.search-switch-on').parent())) $('.search-switch-on').trigger('click');
     });

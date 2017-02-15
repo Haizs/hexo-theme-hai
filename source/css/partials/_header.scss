@@ -2,6 +2,7 @@ header {
   @include bg-white();
   position: fixed;
   width: 100%;
+  z-index: 1;
   a {
     display: block;
     height: 42px;

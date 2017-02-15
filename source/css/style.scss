@@ -3,9 +3,13 @@
  * Author: Haizs
  * Author URI: https://haizs.com
  */
+// Main
 @import "partials/base";
+@import "partials/main";
+// Partials
 @import "partials/header";
 @import "partials/content";
 @import "partials/sidebar";
 @import "partials/footer";
-@import "partials/main";
+// Pages
+@import "pages/index";

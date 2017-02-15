@@ -1,0 +1,9 @@
+aside {
+  @include bg-white();
+  display: block;
+  float: right;
+  width: 300px;
+  @media all and (max-width: $mobile-width) {
+    display: none;
+  }
+}

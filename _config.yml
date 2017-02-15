@@ -6,6 +6,17 @@ menu:
   留言: /guestbook
   关于: /about
 
+# Profile
+profile:
+  name: Haizs Chen
+  title: Independent Developer
+  location: China
+  # Social
+  mail: mailto:mail@haizs.net
+  github: Https://Github.com/Haizs
+  feed: /atom.xml
+
+
 # Footer
 nav:
   站点地图: /sitemap.xml

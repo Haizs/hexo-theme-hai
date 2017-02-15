@@ -1,0 +1,40 @@
+<div id="banner">
+    <div id="profile">
+        <div id="personal-info">
+            <div id="avatar">
+                <img src="/images/avatar.png">
+            </div>
+            <div id="name"><%- theme.profile['name'] %></div>
+            <div id="title"><%- theme.profile['title'] %></div>
+            <div id="location"><i class="fa fa-map-marker"></i> <%- theme.profile['location'] %></div>
+        </div>
+        <div id="article-info">
+            <div class="article-info">
+                <%- page.total %><br/>Posts
+            </div>
+            <div class="article-info">
+                <%- page.total %><br/>Tags
+            </div>
+        </div>
+        <div id="social-links">
+            <a class="social-links" target="_blank" href="<%- theme.profile['mail'] %>">
+                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+            </a>
+            <a class="social-links" target="_blank" href="<%- theme.profile['github'] %>">
+                <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+            </a>
+            <a class="social-links" target="_blank" href="<%- theme.profile['feed'] %>">
+                <i class="fa fa-rss fa-2x" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <div id="banner-picture">
+        <img src="/images/banner.jpg">
+    </div>
+</div>
+<div class="clear"></div>
+<div id="posts">
+    <% page.posts.each(function(post) { %>
+    <%- partial('_partial/article', {post: post, index: true}) %>
+    <% }); %>
+</div>
