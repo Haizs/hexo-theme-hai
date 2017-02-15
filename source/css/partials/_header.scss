@@ -8,13 +8,28 @@ header {
     line-height: 42px;
     padding: 0 27px;
   }
-  .no-touch .nav-item a:hover {
+  i {
+    transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+  }
+  .no-touch & .nav-item a:hover {
     background-color: $nav-color;
   }
   .fa-lg {
     vertical-align: baseline;
     line-height: 42px;
   }
+}
+
+.header-wrap {
+  @media all and (max-width: $mobile-width) {
+    padding: 0 !important;
+  }
+}
+
+.header-fixed {
+  transform: translateY(0) !important;
 }
 
 #logo {
@@ -40,6 +55,7 @@ header {
 
 #nav-header-mobile {
   position: absolute;
+  left: 0;
   text-align: center;
   width: 100%;
   z-index: -1;
@@ -48,23 +64,31 @@ header {
   }
 }
 
+#nav-popup {
+  @include bg-white();
+  margin: 0 auto;
+  height: 0;
+  transition: height 0.2s ease;
+  overflow: hidden;
+  .nav-item {
+    border-top: 1px dashed #DCDCDC;;
+    display: block;
+  }
+}
+
 #nav-search {
   float: right;
+  height: 42px;
   text-align: center;
 }
 
-.header-switch {
-  width: 42px;
-  padding: 0;
-}
-
-.header-switch-rotate {
+.nav-switch-on,
+.search-switch-on {
   transform: rotate(90deg);
   -ms-transform: rotate(90deg); /* IE 9 */
   -moz-transform: rotate(90deg); /* Firefox */
   -webkit-transform: rotate(90deg); /* Safari 和 Chrome */
   -o-transform: rotate(90deg); /* Opera */
-  background-color: $nav-color;
 }
 
 .headroom {

@@ -94,14 +94,15 @@ body {
 a {
   color: $theme-color;
   text-decoration: none;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  transition: 0.2s ease;
   &:visited {
     color: $theme-color;
-    -webkit-transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    transition: 0.2s ease;
   }
   .no-touch &:hover {
     color: $hover-color;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -111,7 +112,9 @@ div {
 
 .wrap {
   max-width: 1320px;
-  margin: 0 auto;
+  @media all and (min-width: $mobile-width+1px) {
+    margin: 0 auto;
+  }
   padding: 0 20px;
 }
 
@@ -132,14 +135,13 @@ div {
   }
   a {
     color: black;
-    &:visited{
+    &:visited {
       color: black;
     }
   }
-}
-
-.no-touch .nav-item a:hover{
-  color: $theme-color !important;
+  .no-touch & a:hover {
+    color: $theme-color !important;
+  }
 }
 
 #container {
