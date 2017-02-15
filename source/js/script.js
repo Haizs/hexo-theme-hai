@@ -1,13 +1,13 @@
-function switchOff(touchT, switchT) {
-    if (!switchT.is(touchT) && !switchT.parent().is(touchT)) {
-        switchT.trigger('click');
-    }
+function isClickArea(target, area) {
+    return (area.is(target) || area.has(target).length);
 }
 
 $(function () {
     $('html').on('click touchstart', function (e) {
-        switchOff(e.target, $('.nav-switch-on'));
-        switchOff(e.target, $('.search-switch-on'));
+        // switchOff(e.target, $('.nav-switch-on'));
+        // switchOff(e.target, $('.search-switch-on'));
+        if (!isClickArea(e.target, $('.nav-switch-on').parent()) && !isClickArea(e.target, $('.nav-popup-show'))) $('.nav-switch-on').trigger('click');
+        if (!isClickArea(e.target, $('.search-switch-on').parent())) $('.search-switch-on').trigger('click');
     });
 
     $('body').on('touchstart', function () {
@@ -18,7 +18,7 @@ $(function () {
         $('.search-switch-on').trigger('click');
         $('header').toggleClass('header-fixed');
         $(this).children().toggleClass('nav-switch-on');
-        $(this).parent().next().toggleClass('popup-show');
+        $(this).parent().next().toggleClass('nav-popup-show');
         return false;
     });
 

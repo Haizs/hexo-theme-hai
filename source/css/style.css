@@ -23,6 +23,7 @@ header {
   .no-touch header .nav-item a:hover {
     background-color: #f7f7f7; }
   header .fa-lg {
+    font-size: 20px;
     vertical-align: baseline;
     line-height: 42px; }
 
