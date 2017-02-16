@@ -1,3 +1,47 @@
 <article>
-    <%- (post.excerpt) ? (post.excerpt) : (post.content) %>
+    <div class="icons">
+        <a class="article-format">
+
+        </a>
+        <a class="share-button">
+
+        </a>
+        <div class="sharebox">
+
+        </div>
+    </div>
+    <h1 class="article-title">
+        <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+    </h1>
+    <div class="article-info">
+        <div class="article-date">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <%- date(post.date) %>
+        </div>
+        <div class="article-category">
+            <i class="fa fa-folder" aria-hidden="true"></i>
+            <%- list_categories(post.categories, {
+                show_count: false,
+                style: 'none',
+                separator: ' > ',
+                class: 'category'
+            }) %>
+        </div>
+    </div>
+    <div class="article-tags">
+        <%- list_tags(post.tags, {
+            show_count: false,
+            style: 'none',
+            separator: '',
+            class: 'tag-list'
+        }) %>
+    </div>
+    <div class="article-content">
+        <% if (isIndex && post.excerpt) { %>
+        <%- post.excerpt %>
+        <a href="<%- url_for(post.path) + '#more' %>" class="more-link">Read More</a>
+        <% } else { %>
+        <%- post.content %>
+        <% } %>
+    </div>
 </article>

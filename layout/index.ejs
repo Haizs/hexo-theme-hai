@@ -8,11 +8,11 @@
             <div id="title"><%- theme.profile['title'] %></div>
             <div id="location"><i class="fa fa-map-marker"></i> <%- theme.profile['location'] %></div>
         </div>
-        <div id="article-info">
-            <div class="article-info">
+        <div id="site-info">
+            <div class="site-info">
                 <%- page.total %><br/>Posts
             </div>
-            <div class="article-info">
+            <div class="site-info">
                 <%- page.total %><br/>Tags
             </div>
         </div>
@@ -35,6 +35,6 @@
 <div class="clear"></div>
 <div id="posts">
     <% page.posts.each(function(post) { %>
-    <%- partial('_partial/article', {post: post, index: true}) %>
+    <%- partial('_partial/article', {post: post, isIndex: true}) %>
     <% }); %>
 </div>
