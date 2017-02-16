@@ -28,4 +28,5 @@ $(function () {
     });
 
     $('header').headroom();
+    pangu.spacingPage();
 });

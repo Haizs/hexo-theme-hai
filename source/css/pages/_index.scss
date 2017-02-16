@@ -9,6 +9,7 @@
   @media all and (min-width: $mobile-width+1px) {
     height: 390px;
   }
+  margin-bottom: 27px;
 }
 
 #profile {
@@ -79,10 +80,11 @@
   border-top: 1px dotted #DCDCDC;
   border-radius: 0 !important;
   box-sizing: border-box;
+  color: #626262;
   float: left;
-  line-height: 27px;
+  line-height: 20px;
   width: 50%;
-  padding: 10px 0;
+  padding: 12px 0;
 }
 
 #social-links {
@@ -92,15 +94,15 @@
 }
 
 .social-links {
-  color: black !important;
+  color: #626262 !important;
   &:visited {
-    color: black !important;
+    color: #626262 !important;
   }
   &:hover {
     color: $theme-color !important;
   }
   display: table-cell;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 #banner-picture {

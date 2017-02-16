@@ -1,28 +1,36 @@
 article {
+  color: #4d4d4d;
+  line-height: 1.5;
   @include bg-white();
-  margin-top: 27px;
+  margin-bottom: 27px;
   word-wrap: break-word;
   h1 {
+    color: #333333;
     font-size: 27px;
     margin-bottom: 15px;
   }
   h2 {
+    color: #333333;
     font-size: 23px;
     margin-bottom: 15px;
   }
   h3 {
+    color: #333333;
     font-size: 20px;
     margin-bottom: 15px;
   }
   h4 {
+    color: #333333;
     font-size: 19px;
     margin-bottom: 15px;
   }
   h5 {
+    color: #333333;
     font-size: 15px;
     margin-bottom: 15px;
   }
   h6 {
+    color: #333333;
     font-size: 13px;
     margin-bottom: 15px;
   }
@@ -34,6 +42,7 @@ article {
 
 .article-title {
   a {
+    font-weight: bold;
     color: #333333 !important;
     &:visited {
       color: #333333 !important;
@@ -55,7 +64,7 @@ article {
 
 .article-info {
   padding: {
-    top: 5px;
+    top: 10px;
     bottom: 15px;
     left: 27px;
     right: 27px;
@@ -63,7 +72,7 @@ article {
   margin-bottom: 11px;
   border-bottom: 1px dashed #DCDCDC;
   color: #B6B6B6 !important;
-  font-size: 12px;
+  font-size: 13px;
   text-align: center;
   div {
     display: inline-block;
@@ -90,23 +99,89 @@ article {
 }
 
 .tag-link {
+  color: #828282;
+  &:visited {
+    color: #828282;
+  }
+  &:hover {
+    background-color: darken($hover-color, 15%);
+    color: white !important;
+    &:before {
+      background-color: darken($hover-color, 15%);
+    }
+  }
+  margin: 0 30px 15px 0;
   display: inline-block;
+  font-size: 12px;
+  padding: 6px 11px 6px 11px;
+  border-radius: 2px 0 0 2px;
+  position: relative;
+  background-color: #F1F1F1;
+  height: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  &:before {
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    top: -13px;
+    border-radius: 2px 2px 2px 2px;
+    content: "";
+    margin-top: 16px;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #F1F1F1;
+    -moz-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
 }
 
 .article-content {
   padding: {
     left: 27px;
     right: 27px;
-    bottom: 15px;
+    bottom: 7px;
   }
   p {
+    text-align: justify;
     font-size: 16px;
-    margin: 10px 0;
+    margin: 20px 0;
+  }
+  a {
+    color: darken($theme-color, 15%);
+    &:visited {
+      color: darken($theme-color, 15%);
+    }
+    &:hover {
+      color: darken($hover-color, 11%);
+    }
   }
 }
 
 .more-link {
-  display: block;
-  position: relative;
-  top: 10px;
+  color: white !important;
+  background-color: lighten($theme-color, 10%);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: {
+    top: 3px;
+    bottom: 3px;
+    left: 5px;
+    right: 5px;
+  }
+  display: inline-block;
+  margin-bottom: 20px;
+  &:visited {
+    color: white !important;
+  }
+  &:hover {
+    color: white !important;
+    background-color: lighten($hover-color, 10%);
+  }
 }
