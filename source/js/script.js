@@ -4,7 +4,6 @@ function isClickArea(target, area) {
 
 $(function () {
     $('html').on('click touchstart', function (e) {
-        console.log(e.target);
         var switchArea = $('.nav-switch-on');
         if (!isClickArea(e.target, switchArea.parent()) && !isClickArea(e.target, $('.nav-popup-show'))) switchArea.trigger('click');
         switchArea = $('.search-switch-on');
@@ -44,4 +43,14 @@ $(function () {
     pangu.spacingPage();
     $('header').headroom();
     $('.share-qrcode').qrcode({text: window.location.href});
+    $('article').each(function () {
+        $(this).find('img').each(function () {
+            if ($(this).parent().hasClass('fancybox')) return;
+            var alt = this.alt;
+            $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+        });
+    });
+    if ($.fancybox) {
+        $('.fancybox').fancybox();
+    }
 });
