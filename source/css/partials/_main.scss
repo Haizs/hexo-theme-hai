@@ -147,8 +147,12 @@ div {
   margin: {
     top: 69px;
     bottom: 15px;
-    left: auto;
-    right: auto;
+  }
+  @media all and (min-width: $tablet-width+1px) {
+    margin: {
+      left: auto;
+      right: auto;
+    }
   }
   article,
   div,

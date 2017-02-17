@@ -1,33 +1,68 @@
 <article>
-    <div class="icons">
-        <a class="article-format">
-
-        </a>
-        <a class="share-button">
-
-        </a>
-        <div class="sharebox">
+    <div class="article-format">
+        <% if (post.top) { %>
+        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+        <% } else { %>
+        <i class="fa fa-file-text" aria-hidden="true"></i>
+        <% } %>
+    </div>
+    <% if (!isIndex) { %>
+    <div class="share-button">
+        <i class="fa fa-share" aria-hidden="true"></i>
+    </div>
+    <div class="sharebox">
+        <div class="share-type">
+            <a class="share-link" target="_blank"
+               href="http://service.weibo.com/share/share.php?url=<%- post.permalink %>&title=<%- post.title + ' - ' + config.title %>&appkey=623908058&searchPic=true">
+                <i class="fa fa-weibo" aria-hidden="true"></i>
+            </a>
+            <a class="share-link" target="_blank"
+               href="http://connect.qq.com/widget/shareqq/index.html?url=<%- post.permalink %>&title=<%- post.title + ' - ' + config.title %>">
+                <i class="fa fa-qq" aria-hidden="true"></i>
+            </a>
+            <a class="share-link" target="_blank" href="https://plus.google.com/share?url=<%- post.permalink %>">
+                <i class="fa fa-google-plus" aria-hidden="true"></i>
+            </a>
+            <a class="share-link" target="_blank"
+               href="https://twitter.com/intent/tweet?text=<%- post.title + ' - ' + config.title + ' ' + post.permalink %>&pic=">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a class="share-link" target="_blank"
+               href="http://www.linkedin.com/shareArticle?mini=true&ro=true&title=<%- post.title %>&url=<%- post.permalink %>&summary=<%- post.title + ' - ' + config.title %>">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="clear"></div>
+        <div class="share-qrcode">
 
         </div>
     </div>
+    <% } %>
     <h1 class="article-title">
+        <% if (isIndex) { %>
         <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+        <% } else { %>
+        <%- post.title %>
+        <% } %>
     </h1>
     <div class="article-info">
         <div class="article-date">
             <i class="fa fa-calendar" aria-hidden="true"></i>
             <%- date(post.date) %>
         </div>
+        <% if (post.categories) { %>
         <div class="article-category">
             <i class="fa fa-folder" aria-hidden="true"></i>
             <%- list_categories(post.categories, {
                 show_count: false,
                 style: 'none',
-                separator: ' > ',
+                separator: ' / ',
                 class: 'category'
             }) %>
         </div>
+        <% } %>
     </div>
+    <% if (post.tags) { %>
     <div class="article-tags">
         <%- list_tags(post.tags, {
             show_count: false,
@@ -36,6 +71,7 @@
             class: 'tag'
         }) %>
     </div>
+    <% } %>
     <div class="article-content">
         <% if (isIndex && post.excerpt) { %>
         <%- post.excerpt %>

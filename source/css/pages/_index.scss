@@ -99,7 +99,7 @@
     color: #626262 !important;
   }
   &:hover {
-    color: $theme-color !important;
+    color: darken($theme-color, 10%) !important;
   }
   display: table-cell;
   padding: 15px 0;
