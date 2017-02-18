@@ -40,17 +40,22 @@ $(function () {
         $(this).siblings('.sharebox').toggleClass('sharebox-show');
     });
 
-    pangu.spacingPage();
+    $('.share-button').one('click', function () {
+        $('.share-qrcode').qrcode({text: window.location.href});
+    });
+
     $('header').headroom();
-    $('.share-qrcode').qrcode({text: window.location.href});
+
     $('article').each(function () {
         $(this).find('img').each(function () {
-            if ($(this).parent().hasClass('fancybox')) return;
-            var alt = this.alt;
-            $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+            if ($(this).parent().hasClass('fancybox') || $($(this).parent())[0].tagName == 'A') return;
+            $(this).wrap('<a href="' + this.src + '" title="' + this.alt + '" class="fancybox"></a>');
         });
     });
     if ($.fancybox) {
         $('.fancybox').fancybox();
     }
+
+    $('pre').addClass('prettyprint linenums');
+    PR.prettyPrint()
 });

@@ -17,7 +17,7 @@
         title = __('title.tag') + ': ' + page.tag;
     }
     %>
-    <title><%= (is_home()) ? (config.title + ' | ' + config.subtitle) : (((title) ? title + ' | ' : '') + config.title) %></title>
+    <title><%= (is_home()) ? (config.title + ((config.subtitle) ? ( ' | ' + config.subtitle) : '')) : (((title) ? title + ' | ' : '') + config.title) %></title>
 
     <% if (page.author || config.author) { %>
     <meta name="author" content="<%= (page.author) ? page.author : config.author %>">
@@ -52,5 +52,6 @@
     <%- partial('calc-css') %>
     <%- css('css/style') %>
     <%- css('css/font-awesome.min') %>
-    <%- css('fancybox/jquery.fancybox') %>
+    <%- css('css/jquery.fancybox') %>
+    <%- css('css/prettify') %>
 </head>

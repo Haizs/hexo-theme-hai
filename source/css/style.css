@@ -151,6 +151,17 @@ div {
       .content > div {
         margin-right: 327px; } }
 
+pre {
+  word-wrap: break-word;
+  white-space: pre-wrap; }
+
+.prettyprint {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 11px 0 11px 60px;
+  margin: 20px -27px; }
+  .prettyprint li {
+    padding: 0 !important; }
+
 header {
   background-color: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -262,27 +273,27 @@ article {
   article h1 {
     color: #333333;
     font-size: 27px;
-    margin-bottom: 15px; }
+    margin-bottom: 20px; }
   article h2 {
     color: #333333;
     font-size: 23px;
-    margin-bottom: 15px; }
+    margin-bottom: 20px; }
   article h3 {
     color: #333333;
     font-size: 20px;
-    margin-bottom: 15px; }
+    margin-bottom: 20px; }
   article h4 {
     color: #333333;
     font-size: 19px;
-    margin-bottom: 15px; }
+    margin-bottom: 20px; }
   article h5 {
     color: #333333;
     font-size: 15px;
-    margin-bottom: 15px; }
+    margin-bottom: 20px; }
   article h6 {
     color: #333333;
     font-size: 13px;
-    margin-bottom: 15px; }
+    margin-bottom: 20px; }
   article img {
     width: 100%; }
 
@@ -416,8 +427,7 @@ article {
 
 .category-link {
   border-bottom: 1px dotted white;
-  color: #B6B6B6 !important;
-  display: inline-block; }
+  color: #B6B6B6 !important; }
   .category-link:visited {
     color: #B6B6B6 !important; }
   .category-link:hover {
