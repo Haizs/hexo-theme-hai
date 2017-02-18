@@ -178,10 +178,15 @@ pre {
 }
 
 .prettyprint {
-  //border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.27);
+  line-height: normal;
   padding: 11px 0 11px 60px;
   margin: 20px -27px;
+  ol {
+    color: lighten(#4d4d4d, 10%) !important;
+  }
   li {
     padding: 0 !important;
   }

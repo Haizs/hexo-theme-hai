@@ -1,0 +1,27 @@
+<div id="pagination">
+    <%
+    var minPage = 1;
+    var maxPage = 9;
+    if (page.current - 4 > minPage) minPage = page.current - 4;
+    if (page.current + 4 > maxPage) maxPage = page.current + 4;
+    if (page.total < maxPage) {
+        maxPage = page.total;
+        minPage = maxPage - 8;
+        if (minPage < 1) minPage = 1;
+    }
+    %>
+    <% if (page.current > 1) { %>
+    <a class="page-prev"
+       href="<%- url_for((page.current == 2) ? (page.base) : (page.base + '/' + config.pagination_dir + '/' + (page.current - 1))) %>">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <% } %>
+    <% for (var i = minPage;i <= maxPage;i++) { %>
+    <a <%- (i == page.current) ? ('class="page-current"') : ('class="page-selectable" href="' + url_for(((i == 1) ? (page.base) : (page.base + '/' + config.pagination_dir + '/' + i)) + '"')) %>>
+        <%- i %></a>
+    <% } %>
+    <div class="page-total"><%- page.current + '/' + page.total %></div>
+    <% if (page.current < page.total) { %>
+    <a class="page-next" href="<%- url_for(page.base + '/' + config.pagination_dir + '/' + (page.current + 1)) %>">
+        <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    <% } %>
+</div>

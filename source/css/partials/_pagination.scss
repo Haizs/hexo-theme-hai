@@ -1,0 +1,76 @@
+#pagination {
+  @include bg-white();
+  margin: {
+    top: 27px;
+    bottom: 27px;
+  }
+  height: 66px;
+  line-height: 66px;
+  font-size: 14px;
+  a {
+    color: #828282;
+    &:visited {
+      color: #828282;
+    }
+  }
+  text-align: center;
+  position: relative;
+  @media all and (min-width: $tablet-width+1px) {
+    margin-right: 327px;
+  }
+}
+
+.page-prev {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 27px;
+  &:hover {
+    background-color: #F5F5F5;
+  }
+}
+
+.page-next {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 27px;
+  &:hover {
+    background-color: #F5F5F5;
+  }
+}
+
+.page-current {
+  @media all and (max-width: $mobile-width) {
+    display: none;
+  }
+  border-radius: 50%;
+  padding: 10px 15px;
+  margin: 0 3px;
+  background-color: $hover-color;
+  color: white !important;
+  &:visited {
+    color: white !important;
+  }
+}
+
+.page-selectable {
+  @media all and (max-width: $mobile-width) {
+    display: none;
+  }
+  border-radius: 50%;
+  padding: 10px 15px;
+  margin: 0 3px;
+  &:hover {
+    background-color: #F5F5F5;
+  }
+}
+
+.page-total {
+  @media all and (min-width: $mobile-width+1px) {
+    display: none;
+  }
+  color: #828282;
+  font-size: 22px;
+  font-family: 'Georgia', "Times New Roman", Times, serif;
+}

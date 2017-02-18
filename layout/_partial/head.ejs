@@ -22,11 +22,11 @@
     <% if (page.author || config.author) { %>
     <meta name="author" content="<%= (page.author) ? page.author : config.author %>">
     <% } %>
-    <% if (is_post() || is_page()){ %>
+    <% if (is_post() || is_page()) { %>
     <% if (page.description) { %>
     <meta name="description" content="<%= page.description %>">
     <% } %>
-    <% if (page.keywords){ %>
+    <% if (page.keywords) { %>
     <meta name="keywords" content="<%= page.keywords %>">
     <% } %>
     <link rel="canonical" href="<%- url_for(page.permalink) %>">
@@ -34,7 +34,7 @@
     <% if (config.description) { %>
     <meta name="description" content="<%= config.description %>">
     <% } %>
-    <% if (config.keywords){ %>
+    <% if (config.keywords) { %>
     <meta name="keywords" content="<%= config.keywords %>">
     <% } %>
     <link rel="canonical" href="<%- url_for(config.url) %>">
@@ -42,10 +42,10 @@
     <meta name="robots" content="noindex">
     <% } %>
 
-    <% if (theme.favicon){ %>
+    <% if (theme.favicon) { %>
     <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>">
     <% } %>
-    <% if (theme.rss){ %>
+    <% if (theme.rss) { %>
     <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
     <% } %>
 
