@@ -1,18 +1,21 @@
 <footer>
     <div class="wrap">
         <div id="cc">
-            本站采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+            本站采用<a rel="license nofollow" href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">
                 <i class="fa fa-creative-commons"></i> 知识共享署名-非商业性使用 4.0 国际许可协议
             </a>进行许可<br/>转载请保留原文链接及作者
         </div>
         <div id="cc-mobile">
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+            <a rel="license nofollow" href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">
                 <i class="fa fa-creative-commons"></i> 知识共享署名-非商业性使用 4.0 国际许可协议
             </a><br/>转载请保留原文链接及作者
         </div>
         <nav id="nav-footer">
             <% for (var i in theme.nav) { %>
-            <div class="nav-item"><a target="_blank" href="<%- url_for(theme.nav[i]) %>"><%- i %></a></div>
+            <% if (!theme.nav.hasOwnProperty(i)) continue; %>
+            <div class="nav-item">
+                <a rel=nofollow" target="_blank" href="<%- url_for(theme.nav[i]) %>"><%- i %></a>
+            </div>
             <% } %>
         </nav>
         <div id="copyright">

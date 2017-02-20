@@ -1,4 +1,17 @@
 <aside>
-    sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.<br/>
-    sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.<br/>sidebar.
+    <% if (theme.widget.archives && site.posts.length) { %>
+    <%- partial('_widget/archives') %>
+    <% } %>
+    <% if (theme.widget.categories && site.categories.length) { %>
+    <%- partial('_widget/categories') %>
+    <% } %>
+    <% if (theme.widget.tagcloud && site.tags.length) { %>
+    <%- partial('_widget/tagcloud') %>
+    <% } %>
+    <% if (theme.widget.recents && site.posts.length) { %>
+    <%- partial('_widget/recents') %>
+    <% } %>
+    <% if (theme.widget.links) { %>
+    <%- partial('_widget/links') %>
+    <% } %>
 </aside>

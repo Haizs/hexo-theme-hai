@@ -1,0 +1,12 @@
+<div id="sidebar-recents">
+    <h3 class="widget-title"><%- __('widget.recents') %></h3>
+    <ul>
+        <% site.posts.sort('date', -1).limit(5).each(function(post) { %>
+        <li>
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
+            <a rel="nofollow" target="_blank" href="<%- url_for(post.path) %>">
+                <%- post.title %><span><%- date(post.date) %></span></a>
+        </li>
+        <% }) %>
+    </ul>
+</div>

@@ -83,7 +83,7 @@ body {
   flex-direction: column;
   -webkit-flex-direction: column;
   font: {
-    family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    family: "San Francisco", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     size: 16px;
   }
   -webkit-text-size-adjust: 100%;
@@ -148,7 +148,7 @@ div {
     top: 69px;
     bottom: 15px;
   }
-  @media all and (min-width: $tablet-width+1px) {
+  @media all and (min-width: 1321px) {
     margin: {
       left: auto;
       right: auto;

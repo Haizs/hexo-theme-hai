@@ -1,0 +1,50 @@
+<div id="sidebar-archives">
+    <h3 class="widget-title"><%- __('widget.archives') %></h3>
+    <% // From hexo/lib/plugins/helper/list_archives.js
+    function link(item) {
+        var url = config.archive_dir + '/' + item.year + '/';
+        if (item.year == moment().year()) {
+            if (item.month < 10) url += '0';
+            url += item.month + '/';
+        }
+        return url_for(url);
+    }
+    var posts = site.posts.sort('date', -1);
+    var data = [];
+    var result = '';
+    posts.forEach(function (post) {
+        // Clone the date object to avoid pollution
+        var date = post.date.clone();
+        if (config.timezone) date = date.tz(config.timezone);
+        if (config.language) date = date.locale(config.language);
+        var formata = (config.language == 'zh-cn') ? 'YYYY年MMMM' : 'MMMM YYYY';
+        var formaty = (config.language == 'zh-cn') ? 'YYYY年' : 'YYYY';
+        var year = date.year();
+        var month = date.month() + 1;
+        var name = (year == moment().year()) ? (date.format(formata)) : (date.format(formaty));
+        var lastData = data[data.length - 1];
+        if (!lastData || lastData.name !== name) {
+            data.push({
+                name: name,
+                year: year,
+                month: month,
+                count: 1
+            });
+        } else {
+            lastData.count++;
+        }
+    });
+    result += '<ul>';
+    for (var i = 0, len = data.length; i < len; i++) {
+        var item = data[i];
+        result += '<li><i class="fa fa-caret-right" aria-hidden="true"></i>';
+        result += '<a href="' + link(item) + '">';
+        result += item.name;
+        result += '</a>';
+        result += '<span>&nbsp;(' + item.count + ')</span>';
+        result += '</li>';
+    }
+    result += '</ul>';
+    %>
+    <%- result %>
+</div>

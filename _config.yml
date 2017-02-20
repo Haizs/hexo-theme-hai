@@ -17,6 +17,18 @@ profile:
   github: Https://Github.com/Haizs
   feed: /atom.xml
 
+# Widgets
+widget:
+  archives: true
+  categories: true
+  tagcloud: true
+  recents: true
+  links: true
+
+# Links
+links:
+  海之树: https://haizs.com
+  海之工作室: https://haizs.net
 
 # Footer
 nav:

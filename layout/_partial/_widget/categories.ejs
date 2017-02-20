@@ -1,0 +1,36 @@
+<div id="widget-categories">
+    <h3 class="widget-title"><%- __('widget.categories') %></h3>
+    <% // From hexo/lib/plugins/helper/list_categories.js
+    function listCategoriesHelper(categories) {
+        var orderby = 'name';
+        var order = 1;
+        var result = '';
+
+        function prepareQuery() {
+            var query = {};
+            query.parent = {$exists: false};
+
+            return categories.find(query).sort(orderby, order).filter(function (cat) {
+                return cat.length;
+            });
+        }
+
+        function hierarchicalList() {
+            var result = '';
+            prepareQuery().forEach(function (cat, i) {
+                result += '<li><i class="fa fa-caret-right" aria-hidden="true"></i>';
+                result += '<a href="' + url_for(cat.path) + '">';
+                result += cat.name;
+                result += '</a>';
+                result += '<span>&nbsp;(' + cat.length + ')</span>';
+                result += '</li>';
+            });
+            return result;
+        }
+
+        result += '<ul>' + hierarchicalList() + '</ul>';
+        return result;
+    }
+    %>
+    <%- listCategoriesHelper(site.categories) %>
+</div>

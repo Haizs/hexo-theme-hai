@@ -55,7 +55,28 @@ $(function () {
     if ($.fancybox) {
         $('.fancybox').fancybox();
     }
-
+    
     $('pre').addClass('prettyprint linenums');
-    PR.prettyPrint()
+    PR.prettyPrint();
+
+    if (!$('#myCanvas').tagcanvas({
+            textColour: '#4d4d4d',
+            textFont: null,
+            bgOutline: null,
+            frontSelect: true,
+            shadow: 'rgba(0, 0, 0, 0.2)',
+            shadowBlur: 1,
+            shadowOffset: [0, 1],
+            shuffleTags: true,
+            outlineMethod: 'colour',
+            outlineColour: '#6ac2c0',
+            outlineRadius: 3,
+            weight: true,
+            weightSizeMax: 16,
+            weightSizeMin: 12,
+            weightSize: 1.5
+        })) {
+        // TagCanvas failed to load
+        $('#tagcloud').hide();
+    }
 });

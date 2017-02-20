@@ -1,0 +1,27 @@
+<div id="tagcloud">
+    <h3 class="widget-title"><%- __('widget.tagcloud') %></h3>
+    <div id="tagcloud-canvas">
+        <canvas width="300" height="300" id="myCanvas">
+            <p>Anything in here will be replaced on browsers that support the canvas element</p>
+            <%
+            var tags = site.tags.filter(function (tag) {
+                return tag.length > 1;
+            });
+            var result = '<ul>';
+            tags.forEach(function (tag) {
+                result += '<li><i class="fa fa-caret-right" aria-hidden="true"></i>';
+                var fsize = 12;
+                fsize += tag.length * 0.1;
+                if (fsize > 16) fsize = 16;
+                result += '<a href="' + url_for(tag.path) + '" style="font-size: ' + fsize + 'px">';
+                result += tag.name;
+                result += '</a>'
+                result += '<span>&nbsp;' + tag.length + '</span>';
+                result += '</li>'
+            });
+            result += '</ul>';
+            %>
+            <%- result %>
+        </canvas>
+    </div>
+</div>

@@ -12,22 +12,23 @@
     </div>
     <div class="sharebox">
         <div class="share-type">
-            <a class="share-link" target="_blank"
+            <a class="share-link" rel="nofollow" target="_blank"
                href="http://service.weibo.com/share/share.php?url=<%- post.permalink %>&title=<%- post.title + ' - ' + config.title %>&appkey=623908058&searchPic=true">
                 <i class="fa fa-weibo" aria-hidden="true"></i>
             </a>
-            <a class="share-link" target="_blank"
+            <a class="share-link" rel="nofollow" target="_blank"
                href="http://connect.qq.com/widget/shareqq/index.html?url=<%- post.permalink %>&title=<%- post.title + ' - ' + config.title %>">
                 <i class="fa fa-qq" aria-hidden="true"></i>
             </a>
-            <a class="share-link" target="_blank" href="https://plus.google.com/share?url=<%- post.permalink %>">
+            <a class="share-link" rel="nofollow" target="_blank"
+               href="https://plus.google.com/share?url=<%- post.permalink %>">
                 <i class="fa fa-google-plus" aria-hidden="true"></i>
             </a>
-            <a class="share-link" target="_blank"
+            <a class="share-link" rel="nofollow" target="_blank"
                href="https://twitter.com/intent/tweet?text=<%- post.title + ' - ' + config.title + ' ' + post.permalink %>&pic=">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
             </a>
-            <a class="share-link" target="_blank"
+            <a class="share-link" rel="nofollow" target="_blank"
                href="http://www.linkedin.com/shareArticle?mini=true&ro=true&title=<%- post.title %>&url=<%- post.permalink %>&summary=<%- post.title + ' - ' + config.title %>">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
             </a>

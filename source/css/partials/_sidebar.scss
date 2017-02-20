@@ -1,9 +1,57 @@
 aside {
-  @include bg-white();
   display: block;
   float: right;
   width: 300px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #828282;
+  a {
+    display: table-cell;
+    color: #828282;
+    &:visited {
+      color: #828282;
+    }
+    .no-touch &:hover {
+      color: $hover-color !important;
+    }
+  }
   @media all and (max-width: $tablet-width) {
     display: none;
   }
+  & > div {
+    @include bg-white();
+    padding: {
+      top: 27px;
+      left: 20px;
+      right: 15px;
+      bottom: 22px;
+    }
+    margin-bottom: 27px;
+  }
+  h3 {
+    color: #636363;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 11px;
+  }
+  li {
+    list-style: none;
+    margin: 5px 0;
+  }
+  i {
+    display: table-cell !important;
+    color: #B6B6B6 !important;
+    padding-right: 5px;
+  }
+  span {
+    display: table-cell;
+    color: #B6B6B6 !important;
+  }
+}
+
+#tagcloud-canvas {
+  margin-left: -20px;
+  width: 300px;
+  height: 300px;
 }

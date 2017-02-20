@@ -25,8 +25,9 @@
 
 #personal-info {
   cursor: default;
+  height: 235px;
   user-select: none;
-  margin: 0 15px;
+  padding-top: 27px;
 }
 
 #avatar {
@@ -37,7 +38,6 @@
   width: 128px;
   border-radius: 50% !important;
   margin: {
-    top: 27px;
     bottom: 15px;
     left: auto;
     right: auto;
@@ -61,7 +61,6 @@
   font-size: 12px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   color: lighten(black, 60%);
-  padding-bottom: 27px;
 }
 
 #site-info {
@@ -76,6 +75,7 @@
 }
 
 .site-info {
+  height: 66px;
   border-bottom: 1px dotted #DCDCDC;
   border-top: 1px dotted #DCDCDC;
   border-radius: 0 !important;
@@ -88,6 +88,7 @@
 }
 
 #social-links {
+  height: 62px;
   display: table;
   table-layout: fixed;
   width: 100%;
@@ -102,7 +103,9 @@
     color: darken($theme-color, 10%) !important;
   }
   display: table-cell;
-  padding: 15px 0;
+  .fa {
+    line-height: 62px !important;
+  }
 }
 
 #banner-picture {
