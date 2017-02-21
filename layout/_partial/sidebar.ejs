@@ -1,4 +1,7 @@
 <aside>
+    <% if (theme.widget.calendar) { %>
+    <%- partial('_widget/calendar') %>
+    <% } %>
     <% if (theme.widget.archives && site.posts.length) { %>
     <%- partial('_widget/archives') %>
     <% } %>

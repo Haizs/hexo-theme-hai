@@ -6,7 +6,10 @@
     var title = page.title;
     if (is_archive()) {
         title = __('title.archive');
-        if (is_month()) {
+        if (page.day) {
+            title += ': ' + page.year + '/' + page.month + '/' + page.day;
+        }
+        else if (is_month()) {
             title += ': ' + page.year + '/' + page.month;
         } else if (is_year()) {
             title += ': ' + page.year;

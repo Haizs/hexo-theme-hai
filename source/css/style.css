@@ -602,7 +602,7 @@ aside {
     aside a:visited {
       color: #828282; }
     .no-touch aside a:hover {
-      color: #6ac2c0 !important; }
+      color: #6ac2c0; }
   @media all and (max-width: 768px) {
     aside {
       display: none; } }
@@ -617,6 +617,7 @@ aside {
     padding-bottom: 22px;
     margin-bottom: 27px; }
   aside h3 {
+    height: 20px;
     color: #636363;
     font-size: 14px;
     text-transform: uppercase;
@@ -632,11 +633,32 @@ aside {
   aside span {
     display: table-cell;
     color: #B6B6B6 !important; }
+  aside table {
+    width: 100%;
+    text-align: center; }
+    aside table a {
+      display: block;
+      background-color: #F1F1F1;
+      border-radius: 3px; }
+      aside table a:hover {
+        background-color: #6ac2c0;
+        color: white !important; }
+    aside table tfoot td {
+      border-top: 10px solid transparent; }
+    aside table .widget-calendar-today {
+      background-color: #419f9c !important;
+      color: white !important; }
+      aside table .widget-calendar-today:visited {
+        background-color: #419f9c !important;
+        color: white !important; }
 
 #tagcloud-canvas {
   margin-left: -20px;
   width: 300px;
   height: 300px; }
+  #tagcloud-canvas canvas {
+    position: relative;
+    top: -58px; }
 
 footer {
   background-color: white;

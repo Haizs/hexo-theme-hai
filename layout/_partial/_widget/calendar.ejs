@@ -1,0 +1,109 @@
+<div id="widget-calendar">
+    <%
+    var date = moment();
+    if (page.archive && page.year && page.month) date = moment().set({'year': page.year, 'month': page.month - 1});
+    var wtitle = date.locale(config.language).format((config.language == 'zh-cn') ? 'YYYY年MMMM' : 'MMMM YYYY');
+    function link(date, fmt) {
+        var url = config.archive_dir + '/' + date.format(fmt);
+        return url_for(url);
+    }
+    %>
+    <h3 class="widget-title"><%- wtitle %></h3>
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">
+                <%- __('calendar.sunday') %>
+            </th>
+            <th scope="col">
+                <%- __('calendar.monday') %>
+            </th>
+            <th scope="col">
+                <%- __('calendar.tuesday') %>
+            </th>
+            <th scope="col">
+                <%- __('calendar.wednesday') %>
+            </th>
+            <th scope="col">
+                <%- __('calendar.thursday') %>
+            </th>
+            <th scope="col">
+                <%- __('calendar.friday') %>
+            </th>
+            <th scope="col">
+                <%- __('calendar.saturday') %>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <%
+        function isSameDay(post) {
+            return post.date.isSame(idate, 'day');
+        }
+        function isSameMonth(post) {
+            return post.date.isSame(idate, 'month');
+        }
+        var idate = date.set('date', 1).clone();
+        var posts = site.posts.filter(isSameMonth);
+        %>
+        <% while (idate.isSame(date, 'month') && idate.date() <= idate.daysInMonth()) { %>
+        <tr>
+            <% if (idate.day()) { %>
+            <td colspan="<%- idate.day() %>"></td>
+            <% } %>
+            <% for (var i = idate.day();i <= 6 && idate.isSame(date, 'month');i++) { %>
+            <td>
+                <% console.log(idate.calendar()); %>
+                <% if (posts.filter(isSameDay).length) { %>
+                <% if (page.day && idate.isSame(moment().set({
+                            'year': page.year,
+                            'month': page.month - 1,
+                            'date': page.day
+                        }), 'day')) { %>
+                <a class="widget-calendar-today"><%- idate.date() %></a>
+                <% } else { %>
+                <a href="<%- link(idate, 'YYYY/MM/DD') %>"><%- idate.date() %></a>
+                <% }} else { %>
+                <%- idate.date() %>
+                <% } %>
+                <% idate.add(1, 'd'); %>
+            </td>
+            <% } %>
+        </tr>
+        <% } %>
+        </tbody>
+        <tfoot>
+        <%
+        function isBeforeMonth(post) {
+            return post.date.isBefore(date, 'month');
+        }
+        function isAfterMonth(post) {
+            return post.date.isAfter(date, 'month');
+        }
+        var bposts = site.posts.filter(isBeforeMonth).sort('date', -1);
+        var aposts = site.posts.filter(isAfterMonth).sort('date', 1);
+        %>
+        <tr>
+            <td colspan="2">
+                <% if (bposts.length) { %>
+                <a href="<%- link(bposts.data[0].date, 'YYYY/MM') %>"><%- bposts.data[0].date.locale(config.language).format('MMMM') %></a>
+                <% } %>
+            </td>
+            <td colspan="3"></td>
+            <td colspan="2">
+                <% if (aposts.length) { %>
+                <a href="<%- link(aposts.data[0].date, 'YYYY/MM') %>"><%- aposts.data[0].date.locale(config.language).format('MMMM') %></a>
+                <% } %>
+            </td>
+        </tr>
+        </tfoot>
+
+        <!--<tfoot>-->
+        <!--<tr>-->
+        <!--<td colspan="3" id="prev"><a href="http://haizs.com/2014/09/">« 9月</a></td>-->
+        <!--<td class="pad">&nbsp;</td>-->
+        <!--<td colspan="3" id="next"><a href="http://haizs.com/2014/11/">11月 »</a></td>-->
+        <!--</tr>-->
+        <!--</tfoot>-->
+    </table>
+</div>

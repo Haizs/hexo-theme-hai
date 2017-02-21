@@ -9,3 +9,12 @@ widget:
   tagcloud: 常用标签
   recents: 最新文章
   links: 友情链接
+
+calendar:
+  sunday: 日
+  monday: 月
+  tuesday: 火
+  wednesday: 水
+  thursday: 木
+  friday: 金
+  saturday: 土
