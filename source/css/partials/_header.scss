@@ -28,6 +28,12 @@ header {
   @media all and (max-width: $tablet-width) {
     padding: 0 !important;
   }
+  @media all and (min-width: 1321px) {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
 }
 
 .header-fixed {
