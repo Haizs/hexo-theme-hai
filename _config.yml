@@ -20,6 +20,7 @@ profile:
 # Widgets
 widget:
   calendar: true
+  catalogue: true
   archives: true
   categories: true
   tagcloud: true

@@ -31,7 +31,7 @@ aside {
   h3 {
     height: 20px;
     color: #636363;
-    font-size: 14px;
+    font-size: 15px;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 11px;
@@ -45,7 +45,7 @@ aside {
     color: #B6B6B6 !important;
     padding-right: 5px;
   }
-  span {
+  ul span {
     display: table-cell;
     color: #B6B6B6 !important;
   }
@@ -71,6 +71,12 @@ aside {
         background-color: darken($hover-color, 15%) !important;
         color: white !important;
       }
+    }
+  }
+  ol a {
+    font-size: 14px;
+    .no-touch &:hover {
+      color: $theme-color !important;
     }
   }
 }

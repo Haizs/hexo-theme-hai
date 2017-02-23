@@ -53,7 +53,6 @@
             <% } %>
             <% for (var i = idate.day();i <= 6 && idate.isSame(date, 'month');i++) { %>
             <td>
-                <% console.log(idate.calendar()); %>
                 <% if (posts.filter(isSameDay).length) { %>
                 <% if (page.day && idate.isSame(moment().set({
                             'year': page.year,

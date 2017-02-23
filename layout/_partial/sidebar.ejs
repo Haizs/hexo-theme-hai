@@ -2,6 +2,9 @@
     <% if (theme.widget.calendar) { %>
     <%- partial('_widget/calendar') %>
     <% } %>
+    <% if (is_post() && theme.widget.catalogue) { %>
+    <%- partial('_widget/catalogue') %>
+    <% } %>
     <% if (theme.widget.archives && site.posts.length) { %>
     <%- partial('_widget/archives') %>
     <% } %>

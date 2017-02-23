@@ -51,7 +51,7 @@ article {
   border-radius: 50% !important;
   background-color: #E83B3B;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  top: 27px;
+  top: 24px;
   left: -16px;
 }
 
@@ -212,10 +212,10 @@ article {
     color: #828282;
   }
   &:hover {
-    background-color: darken($hover-color, 15%);
+    background-color: darken($hover-color, 7%);
     color: white !important;
     &:before {
-      background-color: darken($hover-color, 15%);
+      background-color: darken($hover-color, 7%);
     }
   }
   margin: {

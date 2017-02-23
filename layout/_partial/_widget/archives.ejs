@@ -13,7 +13,6 @@
     var data = [];
     var result = '';
     posts.forEach(function (post) {
-        // Clone the date object to avoid pollution
         var date = post.date.clone();
         if (config.timezone) date = date.tz(config.timezone);
         if (config.language) date = date.locale(config.language);
@@ -21,7 +20,7 @@
         var formaty = (config.language == 'zh-cn') ? 'YYYY年' : 'YYYY';
         var year = date.year();
         var month = date.month() + 1;
-        var name = (year == moment().year()) ? (date.format(formata)) : (date.format(formaty));
+        var name = date.format(formata); //(year == moment().year()) ? (date.format(formata)) : (date.format(formaty));
         var lastData = data[data.length - 1];
         if (!lastData || lastData.name !== name) {
             data.push({
