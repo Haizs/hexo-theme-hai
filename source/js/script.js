@@ -55,7 +55,7 @@ $(function () {
     if ($.fancybox) {
         $('.fancybox').fancybox();
     }
-    
+
     $('pre').addClass('prettyprint linenums');
     PR.prettyPrint();
 

@@ -1,6 +1,6 @@
 <article>
     <div class="article-format">
-        <% if (post.top) { %>
+        <% if (is_home() && post.top) { %>
         <i class="fa fa-thumb-tack" aria-hidden="true"></i>
         <% } else { %>
         <i class="fa fa-file-text" aria-hidden="true"></i>

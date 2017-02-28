@@ -14,7 +14,7 @@
                 fsize += tag.length * 0.1;
                 if (fsize > 16) fsize = 16;
                 result += '<a href="' + url_for(tag.path) + '" style="font-size: ' + fsize + 'px">';
-                result += tag.name;
+                result += tag.name.toUpperCase();
                 result += '</a>'
                 result += '<span>&nbsp;' + tag.length + '</span>';
                 result += '</li>'
