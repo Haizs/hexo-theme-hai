@@ -18,7 +18,6 @@ h4,
 h5,
 h6,
 p,
-blockquote,
 pre,
 a,
 abbr,
@@ -26,7 +25,6 @@ acronym,
 address,
 big,
 cite,
-code,
 del,
 dfn,
 em,
@@ -161,7 +159,7 @@ pre {
   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.27);
   line-height: normal;
   padding: 11px 0 11px 60px;
-  margin: 20px -27px; }
+  margin: 20px -30px; }
   .prettyprint ol {
     color: #676767 !important; }
   .prettyprint li {
@@ -304,7 +302,9 @@ article {
     font-size: 13px;
     margin-bottom: 20px; }
   article img {
-    width: 100%; }
+    max-width: 100%; }
+  article table {
+    margin: 20px 0; }
 
 .article-format {
   color: white !important;
@@ -444,7 +444,7 @@ article {
     border-bottom: 1px dotted #b6b6b6; }
 
 .article-tags {
-  padding-left: 27px;
+  padding-left: 30px;
   border-bottom: 1px dashed #DCDCDC;
   margin-bottom: 15px; }
 
@@ -454,15 +454,13 @@ article {
   margin-right: 27px;
   display: inline-block;
   font-size: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
   padding-left: 11px;
-  padding-right: 8px;
+  padding-right: 6px;
   border-radius: 2px 0 0 2px;
   position: relative;
   background-color: #F1F1F1;
-  height: 10px;
-  line-height: 12px;
+  height: 22px;
+  line-height: 22px;
   text-transform: uppercase;
   z-index: 1; }
   .tag-link:visited {
@@ -492,8 +490,8 @@ article {
     z-index: -1; }
 
 .article-content {
-  padding-left: 27px;
-  padding-right: 27px;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-bottom: 7px; }
   .article-content p {
     text-align: justify;
@@ -508,7 +506,7 @@ article {
 
 .more-link {
   color: white !important;
-  background-color: #66c8ef;
+  background-color: #8ed1cf;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -523,7 +521,7 @@ article {
     color: white !important; }
   .more-link:hover {
     color: white !important;
-    background-color: #8ed1cf; }
+    background-color: #66c8ef; }
 
 #pagination {
   background-color: white;

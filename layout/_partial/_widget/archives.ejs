@@ -3,10 +3,10 @@
     <% // From hexo/lib/plugins/helper/list_archives.js
     function link(item) {
         var url = config.archive_dir + '/' + item.year + '/';
-        if (item.year == moment().year()) {
-            if (item.month < 10) url += '0';
-            url += item.month + '/';
-        }
+        //if (item.year == moment().year()) {
+        if (item.month < 10) url += '0';
+        url += item.month + '/';
+        //}
         return url_for(url);
     }
     var posts = site.posts.sort('date', -1);

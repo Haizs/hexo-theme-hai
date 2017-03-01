@@ -36,7 +36,10 @@ article {
     margin-bottom: 20px;
   }
   img {
-    width: 100%;
+    max-width: 100%;
+  }
+  table {
+    margin: 20px 0;
   }
 }
 
@@ -201,7 +204,7 @@ article {
 }
 
 .article-tags {
-  padding-left: 27px;
+  padding-left: 30px;
   border-bottom: 1px dashed #DCDCDC;
   margin-bottom: 15px;
 }
@@ -225,16 +228,14 @@ article {
   display: inline-block;
   font-size: 12px;
   padding: {
-    top: 6px;
-    bottom: 6px;
     left: 11px;
-    right: 8px;
+    right: 6px;
   }
   border-radius: 2px 0 0 2px;
   position: relative;
   background-color: #F1F1F1;
-  height: 10px;
-  line-height: 12px;
+  height: 22px;
+  line-height: 22px;
   text-transform: uppercase;
   z-index: 1;
   &:before {
@@ -260,8 +261,8 @@ article {
 
 .article-content {
   padding: {
-    left: 27px;
-    right: 27px;
+    left: 30px;
+    right: 30px;
     bottom: 7px;
   }
   p {
@@ -282,7 +283,7 @@ article {
 
 .more-link {
   color: white !important;
-  background-color: lighten($theme-color, 10%);
+  background-color: lighten($hover-color, 10%);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -300,6 +301,6 @@ article {
   }
   &:hover {
     color: white !important;
-    background-color: lighten($hover-color, 10%);
+    background-color: lighten($theme-color, 10%);
   }
 }
