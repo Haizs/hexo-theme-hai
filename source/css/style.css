@@ -100,12 +100,17 @@ a {
     color: #6ac2c0;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
 
+blockquote {
+  font-family: monospace; }
+
 div {
   display: block; }
 
 .wrap {
-  max-width: 1320px;
   padding: 0 27px; }
+  @media all and (min-width: 1321px) {
+    .wrap {
+      width: 1320px; } }
 
 .clear {
   clear: both; }
@@ -302,7 +307,7 @@ article {
     font-size: 13px;
     margin-bottom: 20px; }
   article img {
-    max-width: 100%; }
+    max-width: 50%; }
   article table {
     margin: 20px 0; }
 
