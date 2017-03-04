@@ -31,6 +31,13 @@
     <% } %>
     <% if (page.keywords) { %>
     <meta name="keywords" content="<%= page.keywords %>">
+    <% } else if (page.tags) {
+        var keywords = '';
+        for (var i in page.tags.data) {
+            keywords = ((keywords) ? keywords + ',' : '') + page.tags.data[i].name.replace(/(^\s+)|(\s+$)/g, "");
+        }
+    %>
+    <meta name="keywords" content="<%= keywords %>">
     <% } %>
     <link rel="canonical" href="<%- url_for(page.permalink) %>">
     <% } else if (is_home() && page.current == 1) { %>
