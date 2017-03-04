@@ -36,6 +36,10 @@ aside {
     font-weight: bold;
     margin-bottom: 11px;
   }
+  ol, ul {
+    padding-left: 0;
+    margin: 0;
+  }
   li {
     list-style: none;
     margin: 5px 0;

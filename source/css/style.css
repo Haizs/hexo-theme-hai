@@ -37,16 +37,11 @@ samp,
 small,
 strike,
 strong,
-sub,
-sup,
 tt,
 var,
 dl,
 dt,
 dd,
-ol,
-ul,
-li,
 fieldset,
 form,
 label,
@@ -163,7 +158,7 @@ pre {
   -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.27);
   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.27);
   line-height: normal;
-  padding: 11px 0 11px 60px;
+  padding: 11px 0;
   margin: 20px -30px; }
   .prettyprint ol {
     color: #676767 !important; }
@@ -538,6 +533,10 @@ article {
     color: white !important;
     background-color: #66c8ef; }
 
+.footnotes {
+  margin: 0 -30px;
+  color: #828282; }
+
 #pagination {
   background-color: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.11);
@@ -640,6 +639,9 @@ aside {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 11px; }
+  aside ol, aside ul {
+    padding-left: 0;
+    margin: 0; }
   aside li {
     list-style: none;
     margin: 5px 0; }
