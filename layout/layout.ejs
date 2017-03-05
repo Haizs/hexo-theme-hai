@@ -2,14 +2,14 @@
 <html<%= (config.language) ? ' lang=' + config.language.substring(0, 2) : "" %>>
 <%- partial('_partial/head') %>
 <body class="no-touch">
-<%- partial('_partial/header') %>
+<%- partial('_partial/header', {}, {cache: true}) %>
 <div id="container" class="wrap">
     <div class="content">
         <%- body %>
     </div>
     <%- partial('_partial/sidebar') %>
 </div>
-<%- partial('_partial/footer') %>
+<%- partial('_partial/footer', {}, {cache: true}) %>
 <%- partial('_partial/after-footer') %>
 </body>
 </html>

@@ -6,18 +6,18 @@
     <%- partial('_widget/catalogue') %>
     <% } %>
     <% if (theme.widget.archives && site.posts.length) { %>
-    <%- partial('_widget/archives') %>
+    <%- partial('_widget/archives', {}, {cache: true}) %>
     <% } %>
     <% if (theme.widget.categories && site.categories.length) { %>
-    <%- partial('_widget/categories') %>
+    <%- partial('_widget/categories', {}, {cache: true}) %>
     <% } %>
     <% if (theme.widget.tagcloud && site.tags.length) { %>
-    <%- partial('_widget/tagcloud') %>
+    <%- partial('_widget/tagcloud', {}, {cache: true}) %>
     <% } %>
     <% if (theme.widget.recents && site.posts.length) { %>
-    <%- partial('_widget/recents') %>
+    <%- partial('_widget/recents', {}, {cache: true}) %>
     <% } %>
     <% if (theme.widget.links) { %>
-    <%- partial('_widget/links') %>
+    <%- partial('_widget/links', {}, {cache: true}) %>
     <% } %>
 </aside>
