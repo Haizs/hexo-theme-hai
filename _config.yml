@@ -14,7 +14,7 @@ profile:
   location: Shenyang, China
   # Social
   mail: mailto:mail@haizs.net
-  github: Https://Github.com/Haizs
+  github: https://github.com/Haizs
   feed: /atom.xml
 
 # Widgets
@@ -35,7 +35,7 @@ links:
 # Footer
 nav:
   站点地图: /sitemap.xml
-  主题源码: https://Github.com/Haizs/hexo-theme-hai
+  主题源码: https://github.com/Haizs/hexo-theme-hai
   海之工作室: https://haizs.net
 
 # Miscellaneous
