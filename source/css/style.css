@@ -314,7 +314,9 @@ article {
     font-size: 13px;
     margin-bottom: 20px; }
   article img {
-    max-width: 50%; }
+    max-width: 100%;
+    display: block;
+    margin: 20px auto; }
   article table {
     margin: 20px 0; }
 

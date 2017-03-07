@@ -46,7 +46,9 @@ article {
     margin-bottom: 20px;
   }
   img {
-    max-width: 50%;
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
   }
   table {
     margin: 20px 0;
