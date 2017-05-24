@@ -28,11 +28,12 @@ header {
   @media all and (max-width: $tablet-width) {
     padding: 0 !important;
   }
-  @media all and (min-width: 1321px) {
+  @media all and (min-width: $fullscreen-width+1px) {
     margin: {
       left: auto;
       right: auto;
     }
+    width: $fullscreen-width;
   }
 }
 
@@ -95,7 +96,7 @@ header {
   transform: rotate(90deg);
   -ms-transform: rotate(90deg); /* IE 9 */
   -moz-transform: rotate(90deg); /* Firefox */
-  -webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+  -webkit-transform: rotate(90deg); /* Safari Chrome */
   -o-transform: rotate(90deg); /* Opera */
 }
 

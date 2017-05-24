@@ -107,8 +107,8 @@ div {
 }
 
 .wrap {
-  @media all and (min-width: 1321px) {
-    width: 1320px;
+  @media all and (min-width: $fullscreen-width+1px) {
+    width: 1280px;
   }
   padding: 0 27px;
 }
@@ -146,7 +146,7 @@ div {
     top: 69px;
     bottom: 15px;
   }
-  @media all and (min-width: 1321px) {
+  @media all and (min-width: $fullscreen-width+1px) {
     margin: {
       left: auto;
       right: auto;

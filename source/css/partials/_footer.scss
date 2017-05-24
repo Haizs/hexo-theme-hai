@@ -4,6 +4,17 @@ footer {
   padding: 15px 0;
 }
 
+.footer-wrap{
+  @media all and (min-width: $fullscreen-width+55px) {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    width: $fullscreen-width;
+  }
+  padding: 0 27px;
+}
+
 #cc,
 #cc-mobile {
   color: #636363;
